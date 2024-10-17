@@ -10,7 +10,7 @@ type UserProps = {
 
 const User: FC<UserProps> = ({user}) => {
     return (
-        <div className={styles.user}>
+        <div className={styles.box}>
             {objListing(user)}
         </div>
     );

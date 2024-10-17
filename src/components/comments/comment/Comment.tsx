@@ -8,7 +8,7 @@ type CommentProps = {
 }
 const Comment:FC<CommentProps> = ({comment}) => {
     return (
-        <div className={styles.comment}>
+        <div className={styles.box}>
             {objListing(comment)}
         </div>
     );

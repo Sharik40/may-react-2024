@@ -10,7 +10,7 @@ type UserProps = {
 
 const Post: FC<UserProps> = ({post}) => {
     return (
-        <div className={styles.post}>
+        <div className={styles.box}>
             {objListing(post)}
         </div>
     );

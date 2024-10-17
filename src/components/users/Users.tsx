@@ -9,7 +9,7 @@ const Users = () => {
 
     useEffect(() => {
         getUsers().then(value => {
-            setUsers(value.users)
+            setUsers(value)
         })
     }, []);
     return (

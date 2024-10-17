@@ -9,7 +9,7 @@ const Posts = () => {
 
     useEffect(() => {
         getPosts().then(value => {
-             setPosts(value.posts)
+             setPosts(value)
         })
     }, []);
     return (

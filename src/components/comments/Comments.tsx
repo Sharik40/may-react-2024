@@ -9,7 +9,7 @@ const Comments = () => {
 
     useEffect(() => {
         getComments().then(value => {
-            setComments(value.comments);
+            setComments(value);
         })
     }, []);
     return (
