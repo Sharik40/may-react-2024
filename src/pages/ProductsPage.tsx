@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import PaginationComponent from "../components/PaginationComponent";
 import {IProducts} from "../models/IProducts";
-import {getProducts} from "../services/api.service";
+import {getAll} from "../services/api.service";
 import {useSearchParams} from "react-router-dom";
 import Products from "../components/Products";
 
@@ -14,7 +14,7 @@ const ProductsPage = () => {
     useEffect(() => {
         const page = query.get('page');
         if (page)
-            getProducts(+page).then(value => {
+            getAll<{products: IProducts[]}>(+page).then(value => {
                 setProducts(value.products);
                 const lastId = value.products[value.products.length - 1].id;
                 console.log(value.products);
